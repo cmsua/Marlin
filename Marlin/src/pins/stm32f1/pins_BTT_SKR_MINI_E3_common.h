@@ -28,6 +28,7 @@
 
 #define USES_DIAG_JUMPERS
 
+#define CASE_LIGHT_PIN PC8
 // Ignore temp readings during development.
 //#define BOGUS_TEMPERATURE_GRACE_PERIOD    2000
 
@@ -72,17 +73,27 @@
 //
 // Steppers
 //
+/*
 #define X_ENABLE_PIN                        PB14
 #define X_STEP_PIN                          PB13
 #define X_DIR_PIN                           PB12
+*/
+#define X_ENABLE_PIN                        PB1
+#define X_STEP_PIN                          PB0
+#define X_DIR_PIN                           PC5
 
 #define Y_ENABLE_PIN                        PB11
 #define Y_STEP_PIN                          PB10
 #define Y_DIR_PIN                           PB2
 
+/*
 #define Z_ENABLE_PIN                        PB1
 #define Z_STEP_PIN                          PB0
 #define Z_DIR_PIN                           PC5
+*/
+#define Z_ENABLE_PIN                        PB14
+#define Z_STEP_PIN                          PB13
+#define Z_DIR_PIN                           PB12
 
 #define E0_ENABLE_PIN                       PD2
 #define E0_STEP_PIN                         PB3
@@ -97,7 +108,7 @@
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        PC8   // "HE"
+// #define HEATER_0_PIN                        PC8   // "HE"
 #define HEATER_BED_PIN                      PC9   // "HB"
 
 #ifdef SKR_MINI_E3_V2
